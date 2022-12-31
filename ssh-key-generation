@@ -1,0 +1,11 @@
+# Using SSH keys to login to remote servers to automate the tasks using Ansible is important
+
+# Generating SSH keys
+  $ ssh-keygen -t ed25519 -C "ansible keys" # this will create an ed25519 key type
+
+# The above command creates two key types (Private & Public)
+
+# Copy the generated Public key (xxx.pub) to managed hosts
+
+  $ ssh-copy-id <path-of-ssh-key> <remote-host-ip>
+  $ ssh-copy-id ~/.ssh/id_ed25519.pub 192.168.1.112
