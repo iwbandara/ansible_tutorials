@@ -1,0 +1,14 @@
+# Installing Ansible in CentOS 7
+
+Step 1: Add the EPEL repository
+
+    $ sudo yum install -y epel-release
+    $ sudo yum update -y epel-release
+
+Step 2: Install Ansible on CentOS
+
+    $ yum install -y ansible
+
+Step 3: Printing the Version of Ansible
+    
+    $ ansible --version
