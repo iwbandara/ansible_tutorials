@@ -1,0 +1,22 @@
+# How to install, start & enable httpd service using a playbook
+
+    ---
+    - name: Installing & enabling httpd service
+      hosts: all
+      become: true
+
+      tasks:
+       - name: Installing httpd service
+         yum:
+           name: httpd
+           state: latest
+       
+       - name: Start the httpd service
+         service:
+            name: httpd
+            state: started
+
+       - name: Enabling httpd service
+         service:
+           name: httpd
+           enabled: true
