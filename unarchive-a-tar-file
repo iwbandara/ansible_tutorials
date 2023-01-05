@@ -1,0 +1,13 @@
+# How to unarchive a .tar file using a Playbook
+
+    ---
+    - name: Unarchiving a .tar file
+      hosts: servers
+      become: true
+
+      tasks:
+      - name: Unarchiving a file
+        unarchive:
+          src: /tmp/sample.tar
+          dest: /tmp/sample/
+          remote_src: yes # this will look for the file in the remote machine
