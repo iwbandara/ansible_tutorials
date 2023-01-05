@@ -1,0 +1,12 @@
+# How to remove the httpd package using Ansible playbook
+
+    ---
+    - name: Uninstall http service
+      hosts: servers
+      become: true
+
+      tasks:
+      - name: Uninstall http package
+        yum:
+          name: httpd
+          state: absent
