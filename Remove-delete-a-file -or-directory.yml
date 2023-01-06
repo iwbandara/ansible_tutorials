@@ -1,0 +1,19 @@
+# How to remove/ delete a file using a Playbook
+    ---
+    - name: Remove/Delete a file or Directory
+      hosts: servers
+      become: true
+      vars:
+        - file_location: /tmp/file22.txt
+        - dir_location: /tmp/foo
+ 
+      tasks:
+        - name: Remove/ Delete a file
+            file:
+              path: "{{ file_location }}"
+              state: absent
+
+        - name: Remove/ Delete a directory
+            file:
+              path: "{{ dir_location }}"
+              state: absent
