@@ -1,0 +1,14 @@
+# How to create a directory using an Ansible Playbook
+
+ ---
+ - name: Createa directory using a playbook
+   hosts: all
+   become: true
+   vars: 
+     - dir_name: /tmp/foo
+
+   tasks:   
+     - name: Create a directory
+       file:
+         path: "{{ dir_name }}"
+         state: directory
