@@ -4,6 +4,7 @@
   - name: Installing Apache2 & PHP Packages
     hosts: all
     become: true
+
     tasks:
     - name: install apache2 and php packages for Ubuntu OS
       apt:
@@ -11,4 +12,14 @@
           - apache2
           - libapache2-mod-php
         state: latest
+        update_cache: yes
       when: ansible_distribution == "Ubuntu"
+     
+    - name: install httpd and php packages for CentOS
+      yum:
+        name:
+          - httpd
+          - php
+        state: latest
+        update_cache: yes
+      when: ansible_distribution_version == "CentOS"
