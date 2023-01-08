@@ -1,0 +1,14 @@
+# Installing multiple packages under a single task
+  
+  ---  
+  - name: Installing Apache2 & PHP Packages
+    hosts: all
+    become: true
+    tasks:
+    - name: install apache2 and php packages for Ubuntu OS
+      apt:
+        name:
+          - apache2
+          - libapache2-mod-php
+        state: latest
+      when: ansible_distribution == "Ubuntu"
