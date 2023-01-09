@@ -10,4 +10,4 @@
       user:
         name: saman.r
         comment: Saman Rathnayake
-        shell: /bin/bash
+        shell: /bin/bash # this will make bash as the default shell of the user
