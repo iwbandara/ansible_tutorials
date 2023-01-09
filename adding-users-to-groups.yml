@@ -1,0 +1,15 @@
+# How to add new users to the system & adding them to specific groups using a Playbook
+
+---  
+  - name: Adding users to the system and specific groups
+    hosts: all
+    become: true
+
+    tasks:
+    - name: Add saman.r user to the system with "Saman Rathnayake" as the comment
+      user:
+        name: saman.r
+        comment: Saman Rathnayake
+        shell: /bin/bash
+        groups: sysadmin, netadmin
+        append: yes
