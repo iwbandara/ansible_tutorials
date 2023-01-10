@@ -5,14 +5,14 @@
         user:
           name: "{{ user_name }}"
           state: present
-        when: user_create == yes    
+        when: user_create == 'yes'    
 
       - name: Delete a user
         user:
           name: "{{ user_name }}"
           state: absent
           remove: true
-        when: user_create == no
+        when: user_create == 'no'
 
 # When executing the above playbook need to use '-e' option with the declared variables
 
