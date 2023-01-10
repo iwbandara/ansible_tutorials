@@ -5,7 +5,7 @@
         user:
           name: "{{ item }}"
           state: absent
-          remove: true
+          remove: true # this command ensure that user's home directory and associated mail spool and cron files are removed.
 
         loop:
           - user1
