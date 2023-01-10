@@ -1,0 +1,8 @@
+# Deleting a user from the system using a playbook
+
+    tasks:
+    - name: Remove saman.r user from the system
+      user:
+        name: saman.r
+        state: absent
+        remove: true
