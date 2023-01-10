@@ -1,0 +1,12 @@
+# Adding multiple users with the 'loop' command
+
+    tasks:
+      - name: Adding multiple users
+        user:
+          name: "{{ item }}"
+          shell: /bin/bash
+          state: present
+        loop:
+          - user1
+          - user2
+          - user3
