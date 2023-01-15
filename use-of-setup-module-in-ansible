@@ -1,0 +1,16 @@
+# Use of 'setup' module
+
+The "setup" module in Ansible is used to gather information about the remote hosts on which it is run. This module can be used to gather a wide range of information, including system facts, network information, and information about installed software.
+
+The "setup" module is run by default on all hosts specified in the inventory file when the "gather_facts" option is set to "true" in the playbook. The information gathered by the "setup" module is stored in a variable called "ansible_facts", which can be accessed by other modules and tasks in the playbook.
+
+The gathered information can be used to make decisions about how to configure the remote host, for example, if a specific software is installed or not, based on the gathered facts, the playbook can proceed with appropriate action.
+
+The setup module can also be run explicitly by including the "setup" module in a task and specifying the hosts on which it should be run.
+
+The setup module can also be run with the -m option along with ansible command.
+
+Example:
+ansible all -m setup
+
+This will gather all the facts from all the hosts specified in the inventory file.
