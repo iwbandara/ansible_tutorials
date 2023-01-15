@@ -1,0 +1,19 @@
+# Use of 'copy' module in Ansible
+
+The "copy" module in Ansible is used to copy files from the local machine to the remote hosts. This module can be used to copy files from the local machine to the remote hosts, from remote hosts to the local machine, or from one remote host to another.
+
+The basic syntax of the "copy" module is as follows:
+
+- name: Copy a file to a remote host
+  copy:
+    src: /path/to/local/file
+    dest: /path/to/remote/file
+    remote_src: yes
+
+The "src" parameter is used to specify the source file on the local machine, and the "dest" parameter is used to specify the destination file on the remote host. The "remote_src" parameter is used to specify whether the source file is on the local machine (the default) or on a remote host.
+
+The "copy" module also supports several other options, such as "mode" to specify the permissions of the destination file, "owner" to specify the owner of the destination file, and "backup" to create a backup of the destination file before overwriting it.
+
+It also supports the "checksum" option that allows to check if the file is already present and same on the remote host, this can be used to avoid unnecessary copy operation, thereby reducing the execution time.
+
+The copy module can also be run with the -m option along with ansible command.
