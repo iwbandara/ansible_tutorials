@@ -1,0 +1,28 @@
+# Use of 'shell' module in Ansible
+
+    this is used to run UNIX commands on the shell
+
+    ansible servers -m shell -a 'ls -la'
+
+The "shell" module in Ansible is used to run shell commands on the remote hosts. This module can be used to run any command that can be run on the 
+command line of a Linux or Unix-based system.
+
+The basic syntax of the "shell" module is as follows:
+
+- name: Run a shell command on a remote host
+  shell: "command_to_run"
+
+The "command_to_run" is a string that contains the command that you want to run on the remote host. It can include arguments and options, 
+just as if you were running the command directly on the command line.
+
+One of the main use of "shell" module is to run commands that are not available as ansible modules. As it allows the execution of any shell command,
+it gives more flexibility in terms of customizing the operation.
+
+For example, if you need to check the free space of a remote host, you can use the command "df -h" which will give the output as the 
+free disk space on the remote host.
+
+Another example would be, to check if a service is running or not, you can use the command "systemctl status <service_name>" 
+which will give the status of the service on the remote host.
+
+It is important to note that, using shell module could be less secure and less idempotent than using an ansible module, 
+therefore it should be used with care and when there is no other option.
