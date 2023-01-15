@@ -7,3 +7,7 @@
     ansible webservers -m yum -a "name=httpd state=latest" # install the latest httpd version on the hosts
 
     ansible webservers -m ping # checking the connectivity of the werbservers group of servers
+    
+# Creating file name 'testfile' with 755 file permisssions
+    
+        ansible servers -m file -a "path=/tmp/testfile state=touch mode=0755"
