@@ -11,3 +11,7 @@
 # Creating file name 'testfile' with 755 file permisssions
     
         ansible servers -m file -a "path=/tmp/testfile state=touch mode=0755"
+
+# Change the ownership of a file
+
+        ansible servers -m file -a "path=/tmp/testfile group=sysadmins owner=iwbandara"
