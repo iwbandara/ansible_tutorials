@@ -12,6 +12,15 @@
     
         ansible servers -m file -a "path=/tmp/testfile state=touch mode=0755"
 
+# How to remove the httpd package
+
+    Option 01:
+        ansible servers -m yum -a "name=httpd state=removed"
+
+    Option 02:
+        ansible servers -m yum -a "name=httpd state=absent"
+
 # Change the ownership of a file
 
         ansible servers -m file -a "path=/tmp/testfile group=sysadmins owner=iwbandara"
+     
