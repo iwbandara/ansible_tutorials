@@ -1,0 +1,7 @@
+# Use of 'service' module in Ansible
+
+The "service" module in Ansible is used to manage services on remote hosts. This module can be used to start, stop, restart, and check the status of services on Linux and Unix-based systems.
+
+    ansible all -m service -a "name=httpd state=started" # will start the httpd service in client nodes
+
+    ansible all -m service -a "name=httpd state=stopped" # will stop the httpd service in client nodes
