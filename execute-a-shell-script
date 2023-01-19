@@ -1,0 +1,33 @@
+---
+  - hosts: webapp
+    gather_facts: False
+    tasks:
+    - name: Copy & Create File.
+      copy:
+       dest: /home/justgeek/remote.sh
+       content: |
+       #!/bin/bash
+       Please place your Shell Script here.
+    - name: Run Shell Script.
+      shell: sh /home/justgeek/remote.sh
+    - name: Remove Shell Script
+      file:
+       path: /home/justgeek/remote.sh
+       state: absent
+       
+# The above ansible playbook creates a shell script file copy it to the host and execute & remove once the execution is completed.---
+  - hosts: webapp
+    gather_facts: False
+    tasks:
+    - name: Copy & Create File.
+      copy:
+       dest: /home/justgeek/remote.sh
+       content: |
+       #!/bin/bash
+       Please place your Shell Script here.
+    - name: Run Shell Script.
+      shell: sh /home/justgeek/remote.sh
+    - name: Remove Shell Script
+      file:
+       path: /home/justgeek/remote.sh
+       state: absent
