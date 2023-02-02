@@ -1,5 +1,11 @@
 # Running ad-hoc commands in Ansible
 
+# What is ad-hoc commands
+
+    Ad-Hoc commands are an easy way to run quick commands to perform the actions, and it will not be saved for later.
+    
+    It uses the /usr/bin/ansible command-line tool to automate a single task on one or more managed nodes.
+
 # Ad hoc command syntax:
 
     ansible [host group] [module] [arguments for the module]
