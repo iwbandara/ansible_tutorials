@@ -12,3 +12,8 @@ Step 2: Install Ansible on CentOS
 Step 3: Printing the Version of Ansible
     
     $ ansible --version
+
+Step 4: How to check client connectivity
+
+	# ansible -i ./hosts servers -m ping --user <username> --ask-pass // here inventory file is named as hosts. when executed it will use the specified username to login and prompt for 
+    the ssh password
