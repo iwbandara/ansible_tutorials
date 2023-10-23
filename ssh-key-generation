@@ -5,7 +5,10 @@
   Any compromise of the private key will allow the attacker to log into servers that are configured with the associated public key without additional authentication.
   The public key is uploaded to a remote server that you want to be able to log into with SSH.
 
-# Generating SSH keys
+# Generating RSA Keys:
+  $ ssh-keygen // will create RSA type SSH-keys.
+
+# Generating SSH keys (Type ed25519):
   $ ssh-keygen -t ed25519 -C "ansible keys" # this will create an ed25519 key type
 
 # The above command creates two key types (Private & Public)
