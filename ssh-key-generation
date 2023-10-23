@@ -1,5 +1,10 @@
 # Using SSH keys to login to remote servers to automate the tasks using Ansible is important
 
+# SSH key pairs are two cryptographically secure keys that can be used to authenticate a client to an SSH server. 
+  Each key pair consists of a public key and a private key. The private key is retained by the client and should be kept absolutely secret. 
+  Any compromise of the private key will allow the attacker to log into servers that are configured with the associated public key without additional authentication.
+  The public key is uploaded to a remote server that you want to be able to log into with SSH.
+
 # Generating SSH keys
   $ ssh-keygen -t ed25519 -C "ansible keys" # this will create an ed25519 key type
 
