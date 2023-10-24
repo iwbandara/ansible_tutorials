@@ -18,6 +18,8 @@
     
         ansible servers -m file -a "path=/tmp/testfile state=touch mode=0755"
 
+        ansible -i inventory/hosts -m file -a "path=/home/iwbandara/test_file" state=touch" --user iwbandara --ask-pass
+
 # How to remove the httpd package
 
     Option 01:
