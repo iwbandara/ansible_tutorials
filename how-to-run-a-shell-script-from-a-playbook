@@ -1,0 +1,9 @@
+---
+- name: How to run a shell script from an Ansible Playbook
+  hosts: all
+  become: yes
+
+  tasks:
+   - name: Running a shell script
+     script:
+       cmd: <path-to-the-script>
