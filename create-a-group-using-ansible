@@ -9,8 +9,10 @@
      - name: Create a group with default GID
        group:
          name: developers
+         state: present
 
      - name: Create a group with a specified Group ID
        group:
          name: engineers
          gid: 1100
+         state: present
