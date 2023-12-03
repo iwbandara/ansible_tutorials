@@ -1,0 +1,16 @@
+=> To create a User group in a Linux system below playbook can be used;
+
+  ---
+  - name: Creating a user group
+    hosts: all
+    become: yes
+
+    tasks:
+     - name: Create a group with default GID
+       group:
+         name: developers
+
+     - name: Create a group with a specified Group ID
+       group:
+         name: engineers
+         gid: 1100
