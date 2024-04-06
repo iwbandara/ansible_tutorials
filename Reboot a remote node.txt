@@ -1,0 +1,12 @@
+An Ansible Playbook to reboot a remote node:
+--------------------------------------------
+
+--- 
+- name: Reboot a remote node
+  hosts: clients
+  become: yes
+  
+  tasks:
+    - name: Reboot a node
+      reboot:
+        msg: "Node is rebooting..."
