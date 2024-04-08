@@ -1,0 +1,20 @@
+An Ansible Playbook using Package module:
+--------------------------------------------
+
+*** Package - a module used to install packages.
+
+--- 
+- name: install a package
+  package:
+     name: httpd
+     state: present
+
+- name: install the latest version of a package
+  package:
+     name: httpd
+     state: latest
+
+- name: remove a package
+  package:
+     name: httpd
+     state: absent
