@@ -1,0 +1,29 @@
+Ansible Ad Hoc Commands:
+
+=> To run a shell command with sudo on all hosts in an inventory file.
+ 
+$ ansible -i <inventory_file> all -b -m shell -a "sudo command"
+
+=> Running commands with elevated priviledges:
+
+$ ansbile -i inventory/server_list all -m apt -a update_cache=true --become --ask-become-pass
+
+=> Check docker is installed or not:
+
+$ ansible -i inventory/server_list all -m shell -a "sudo docker --version"
+
+=> To check the status of a specific service on all hosts in an inventory file 
+ 
+$ ansible -i inventory_file all -m service -a "name=apache2 state=started"
+
+=> To copy a file to all hosts in an inventory file:
+
+$ ansible -i inventory_file all -m copy -a "src=/local/path/to/file dest=/remote/path/to/file mode=0644"
+
+=> To copy shell command output a file:
+
+$ ansible -i inventory_file all -m shell -a "free -h > memory.txt"
+
+=> Installing the latest version of apache2:
+
+$ ansible -i inventory_file all -m yum -a "name=apache2 state=latest"
