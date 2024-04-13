@@ -1,0 +1,13 @@
+=> Use of tags in a playbook
+
+    name: Install httpd on CentOS distributions
+    yum:
+      name: httpd
+      state: latest
+  tags: httpd,webserver,centos
+
+=> How to run a playbook with tags at the shell prompt?
+
+  $ ansible-playbook --tags httpd use_tags.yml // Uses a single tag
+
+  $ ansible-playbook --tags "httpd,centos" use_tags.yml // Uses multiple tags
