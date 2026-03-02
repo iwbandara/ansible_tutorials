@@ -1,1 +1,10 @@
 
+What is Ansible?
+----------------
+
+  -> Ansible is an open-source configuration management, software provisioning, and application deployment tool that makes automating your application deployments and 
+    IT infrastructure operation very simple.
+  
+  -> Ansible is very lightweight, easy to configure, and is not resource hungry because it doesn’t need an agent to run (agentless) unlike other automation tools, for example,
+  
+  -> Puppet which is agent based and is a bit complex to configure.
