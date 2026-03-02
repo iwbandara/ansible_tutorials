@@ -15,5 +15,12 @@
 
 # Copy the generated Public key (xxx.pub) to managed hosts
 
+Syntax:
   $ ssh-copy-id user@host-ip-address
+Example:
   $ ssh-copy-id root@192.168.1.112
+
+Syntax:
+  $ ssh-copy-id -i <location-of-the-file> username@ip-address-of-client
+Example:
+  $ ssh-copy-id -i /Users/iwbandara/.ssh/ansible_demo.pub iwbandara@192.168.10.1
