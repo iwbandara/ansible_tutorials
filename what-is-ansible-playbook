@@ -1,3 +1,9 @@
-# Ansible Playbook is ordered lists of tasks, saved so we can run those tasks in that order repeatedly.
+# Ansible Playbook is an ordered lists of tasks, saved so we can run those tasks in that order repeatedly.
 
 # Playbooks in Ansible are written in YAML format and easy to read. YAML means "Yet Another Markup Language".
+
+# A YAML file starts with a "---" at the top.
+
+# A playbook is consists of n muber of plays.
+
+# In a play, you can have n number of tasks.
