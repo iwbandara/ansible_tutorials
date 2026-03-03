@@ -1,5 +1,9 @@
 Ansible Ad Hoc Commands:
 
+-m stands for module such as copy, shell, ping, etc.,
+-a stands for arguments
+-i is used to mention the inventory file location.
+
 => To run a shell command with sudo on all hosts in an inventory file.
  
 $ ansible -i <inventory_file> all -b -m shell -a "sudo command"
@@ -27,3 +31,7 @@ $ ansible -i inventory_file all -m shell -a "free -h > memory.txt"
 => Installing the latest version of apache2:
 
 $ ansible -i inventory_file all -m yum -a "name=apache2 state=latest"
+
+=> Installs a MySQL-python package on the app group in the invenroty.ini file.
+
+$ ansible -i inventory.ini app -m yum -a "name=MySQL-python state=present"
