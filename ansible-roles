@@ -10,3 +10,12 @@
 Example:
 
     # ansible role init httpd
+
+# Below is the folder structure:
+    defaults -> main.yml
+    files
+    handlers -> main.yml
+    tasks -> main.yml
+    templates
+    tests -> inventory, test.yml
+    vars -> main.yml
