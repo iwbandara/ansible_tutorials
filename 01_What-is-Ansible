@@ -21,3 +21,14 @@ Key Features and Concepts:
   => Modules: Ansible executes instructions via modules, which are small programs that do the actual work.
     
   => Inventory: A file defining the managed nodes (servers, network devices)
+
+Common Use Cases:
+-----------------
+
+  => Configuration Management: Automating the configuration of servers, including installing packages and applying updates.
+    
+  => Application Deployment: Streamlining the deployment of applications across multiple environments.
+    
+  => Infrastructure Provisioning: Managing cloud instances, network configurations, and virtual machines.
+    
+  => Orchestration: Managing complex, multi-tier workflows across infrastructure.
