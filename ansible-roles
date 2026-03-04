@@ -1,3 +1,12 @@
 # Role based Ansible Playbooks
 
-    Roles let you automatically load related vars, files, tasks, handlers, and other Ansible artifacts based on a known file structure. After you group your content in roles, you can easily reuse them and share them with other users.
+    Roles let you automatically load related vars, files, tasks, handlers, and other Ansible artifacts based on a known file structure. After you group your content in roles, 
+    you can easily reuse them and share them with other users.
+
+# How to create roles:
+
+    # ansible role init <Name-of-the handler>
+
+Example:
+
+    # ansible role init httpd
