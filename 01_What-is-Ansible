@@ -8,3 +8,16 @@ What is Ansible?
   -> Ansible is very lightweight, easy to configure, and is not resource hungry because it doesn’t need an agent to run (agentless) unlike other automation tools, for example,
   
   -> Puppet which is agent based and is a bit complex to configure.
+
+Key Features and Concepts:
+--------------------------
+
+  => Agentless: No software agents are required on the managed nodes, reducing overhead.
+    
+  => YAML Playbooks: Defines automation tasks in easy-to-read YAML files.
+    
+  => Idempotency: Ensures that running the same playbook multiple times results in the same state, preventing unnecessary changes.
+    
+  => Modules: Ansible executes instructions via modules, which are small programs that do the actual work.
+    
+  => Inventory: A file defining the managed nodes (servers, network devices)
