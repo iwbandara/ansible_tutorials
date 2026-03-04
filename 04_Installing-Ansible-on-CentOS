@@ -1,4 +1,11 @@
-# Installing Ansible in CentOS 7
+Installing Ansible:
+-------------------
+
+=> Ansible relies on SSH and Python to do all the automation magic and so you only need to install Ansible on the control node and make sure that OpenSSH and 
+	Python is installed on both the control and the managed nodes.
+
+# Installing Ansible in CentOS 7:
+---------------------------------
 
 Step 1: Add the EPEL repository
 
@@ -17,3 +24,14 @@ Step 4: How to check client connectivity
 
 	# ansible -i ./hosts servers -m ping --user <username> --ask-pass // here inventory file is named as hosts. when executed it will use the specified username to login and prompt for 
     the ssh password
+
+# Installing Ansible on Ubuntu:
+-------------------------------
+
+Step 1: Enable ansible-2.9 ppa repository
+
+	# apt-add-repository --yes --update ppa:ansible/ansible-2.9
+
+Step 2: Install Ansible on Ubuntu
+
+	# apt-get install -y ansible
