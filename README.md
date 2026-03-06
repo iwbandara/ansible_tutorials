@@ -16,4 +16,6 @@ List:
 
 07 - What is a Playbook?
 
-08 - Example Playbook in Ansible
+08 - Example Playbook in Ansible for installing and starting Nginx
+
+09 - Example Playbook for Adding a new User to a system
