@@ -7,3 +7,21 @@
 # A playbook is consists of n muber of plays.
 
 # In a play, you can have n number of tasks.
+
+# Playbook example:
+
+---
+- name: First Ansible Playbook
+  hosts: all
+
+  vars:
+    file_name: hello_var.txt
+
+  tasks:
+    - name: Copy a file
+      ansible.builtin.copy:
+        src: "{{ file_name }}"
+        dest: /home/iwbandara/
+        owner: iwbandara
+        group: iwbandara
+        mode: '0777'
