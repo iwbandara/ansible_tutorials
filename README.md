@@ -19,3 +19,5 @@ List:
 08 - Example Playbook in Ansible for installing and starting Nginx
 
 09 - Example Playbook for Adding a new User to a system
+
+10 - Example Playbook to reboot a remote node
