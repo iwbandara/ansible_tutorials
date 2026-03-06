@@ -16,4 +16,4 @@ List:
 
 07 - What is a Playbook?
 
-08 - How to wirte a Playbook in Ansible?
+08 - Example Playbook in Ansible
