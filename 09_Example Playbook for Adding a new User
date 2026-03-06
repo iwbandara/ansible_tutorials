@@ -6,7 +6,7 @@
     become: true
 
     tasks:
-    - name: Add saman.r user to the system with "Saman Rathnayake" as the comment
+    - name: Add saman.r user to the system with "Saman Rathnayake" as the comment & shell as bash
       user:
         name: saman.r
         comment: Saman Rathnayake
