@@ -1,0 +1,46 @@
+Use of Ansible Vault:
+---------------------
+
+=> Ansible is a configuration management tool. While working with Ansible, you can create various playbooks, inventory files, variable files, etc. Some of the files contain sensitive and important data like usernames and passwords.
+
+=> Ansible provides a feature named Ansible Vault that prevents this data from being exposed. It keeps passwords and other sensitive data in an encrypted file rather than in plain text files. It provides password-based authentication.
+
+=> Ansible Vault performs various operations. Specifically, it can;
+
+    => Encrypt a file
+    => Decrypt a file
+    => View an encrypted file without breaking the encryption
+    => Edit an encrypted file
+    => Create an encrypted file
+    => Generate or reset the encrypted key
+
+=> How to create an encrypted file;
+
+    # ansible-vault create <FILE-NAME> // File is a YAML file. 
+
+*** After the above command executed, it will ask for a password
+
+    Example:
+
+        # ansible-vault create first_playbook.yml
+
+=> Editing the encrypted file:
+
+    # ansible-vault edit <FILE-NAME> // This will prompt for the password.
+
+=> Decrypting the file:
+
+    # ansible-vault decrypt <FILE-NAME>
+
+=> Reset the file password:
+
+    # ansible-vault rekey <FILE-NAME>
+
+=> Ask password during the Playbook execution:
+
+    # ansible-playbook -i hosts sample-playbook.yml --ask-vault-pass // This will prompt for the vault password
+
+*** The above command will prompt for the password making it interactive. To run it silent mode. We can specify a password file.
+
+    # ansible-playbook -i hosts sample-playbook.yml --vault-password-file secret.txt // The secret.txt is the password file.
+
