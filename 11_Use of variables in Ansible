@@ -12,3 +12,15 @@ or complex data structures (lists, dictionaries)
   -> Task level
 
 *** When considering the precendence level, Role -> Inventory -> Play -> Task
+
+*** Another option is to use "Group variables" through inventory files.
+
+Example:
+
+[web_servers]
+srv1.linetraacademy.lk
+srv2.linetraacademy.lk
+
+[web_servers:vars]
+file_path=/var/www/html/
+user_name=iwbandara
