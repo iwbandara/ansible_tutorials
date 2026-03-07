@@ -1,0 +1,5 @@
+Use of Variables:
+-----------------
+
+-> Ansible uses variables to manage differences between systems, allowing the same playbook to be used across multiple environments. Variables can store simple values (strings, numbers, booleans) 
+or complex data structures (lists, dictionaries) 
