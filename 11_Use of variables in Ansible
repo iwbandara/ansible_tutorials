@@ -3,3 +3,12 @@ Use of Variables:
 
 -> Ansible uses variables to manage differences between systems, allowing the same playbook to be used across multiple environments. Variables can store simple values (strings, numbers, booleans) 
 or complex data structures (lists, dictionaries) 
+
+-> Variables can be defined at following levels;
+
+  -> Role defaults (defaults/main.yml)
+  -> Inventory level
+  -> Play level
+  -> Task level
+
+*** When considering the precendence level, Role -> Inventory -> Play -> Task
