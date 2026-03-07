@@ -3,6 +3,12 @@
     Roles let you automatically load related vars, files, tasks, handlers, and other Ansible artifacts based on a known file structure. After you group your content in roles, 
     you can easily reuse them and share them with other users.
 
+# Advantages of Roles in Ansible:
+
+    1. Modularity
+    2. Reusability
+    3. Directory structure
+
 # How to create roles:
 
     # ansible role init <Name-of-the handler>
