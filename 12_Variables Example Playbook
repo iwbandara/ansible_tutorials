@@ -1,0 +1,27 @@
+---
+- name: Use of different variable types
+  hosts: centos
+  gather_facts: no
+
+  # Play level variable defining
+  vars:
+    is_enabled: true
+    http_port: 443
+
+  tasks:
+    - name: Boolean variables
+      # Task level variable defining
+      vars:
+        is_enabled: true
+        http_port: 25
+      debug:
+        msg: "Variable is TRUE and port number is: {{ http_port }}"
+      when: is_enabled
+
+    - name: Port variable
+      # Task level variable defining. They take precedence over Play level variables.
+      vars:
+        user_name: iwbandara
+      debug:
+        msg: "Port is: {{ http_port }}, Username is: {{ user_name }}"
+      when: is_enabled
