@@ -25,3 +25,14 @@
       debug:
         msg: "Port is: {{ http_port }}, Username is: {{ user_name }}"
       when: is_enabled
+
+--------------------------------------------------------------------------------------------------------------
+
+# Use of environment variables
+      # 1 - define the variable at the server level with export command; $ export <VARIABLE_NAME> <VALUE>
+      # 2 - Call at the playbook with 'lookup' command: lookup('<VARIABLE_NAME>')
+
+      # Furthemore, we can use extra variables as follows;
+
+      # Assigning at the runtime
+      # anible-playbook -i inventory.ini sample.yml --extra-vars http_port=8080
