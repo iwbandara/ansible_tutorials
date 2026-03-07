@@ -21,3 +21,5 @@ List:
 09 - Example Playbook for Adding a new User to a system
 
 10 - Example Playbook to reboot a remote node
+
+11 - Use of variables in Ansible
