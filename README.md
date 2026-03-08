@@ -35,3 +35,5 @@ List:
 15 - Use of Package module in Ansible
 
 16 - Use of multiple plays in a single Playbook
+
+17 - How to verify your Playbook?
