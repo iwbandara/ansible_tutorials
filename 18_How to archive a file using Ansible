@@ -1,0 +1,18 @@
+# A Playbook to archive a file
+
+---
+- name: Archive files
+  hosts: centos
+  gather_facts: no
+  tasks:
+    - name: Archive files to a tar file
+      ansible.builtin.archive:
+        path: /home/iwbandara/Files/*
+        dest: /home/iwbandara/files.tar
+        format: tar
+        
+    - name: Archive files to a gz file
+      ansible.builtin.archive:
+        path: /home/iwbandara/Files/*
+        dest: /home/iwbandara/files.tar.gz
+        format: gz
