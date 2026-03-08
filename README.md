@@ -23,3 +23,13 @@ List:
 10 - Example Playbook to reboot a remote node
 
 11 - Use of variables in Ansible
+
+12 - Variables Example Playbook
+
+13 - Example Playbook for removing or deleting a file or directory
+
+13 - What is Ansible Roles?
+
+14 - What is Ansible Vault?
+
+15 - Use of Package module in Ansible
