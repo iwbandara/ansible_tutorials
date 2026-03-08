@@ -36,4 +36,11 @@ List:
 
 16 - Use of multiple plays in a single Playbook
 
+17 - How to verify your Playbook
+
+18 - How to archive a file
+
+19 - How to unarchive a file
+
+
 17 - How to verify your Playbook?
