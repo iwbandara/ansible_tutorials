@@ -1,7 +1,9 @@
 An Ansible Playbook using Package module:
 --------------------------------------------
 
-*** Package - a module used to install packages.
+*** Package - a module used to install/ remove packages.
+
+# Below Playbook install and remove the httpd from the system
 
 --- 
 - name: install a package
@@ -18,3 +20,10 @@ An Ansible Playbook using Package module:
   package:
      name: httpd
      state: absent
+
+# Below Playbook task install the 'tmux' software on to the node
+
+- name: Install the tmux package
+  package:
+     name: tmux
+     state: present
