@@ -1,0 +1,22 @@
+---
+- name: First Play
+  hosts: all
+  tasks:
+    - name: install tmux
+      package:
+        name: tmux
+        state: present
+
+    - name: create an archive
+      archive:
+        path: /var/log
+        dest: /tmp/logs.tar.gz
+        format: gz
+
+- name: Second Play
+  hosts: node4
+  tasks:
+    - name: install git
+      apt:
+        name: git
+        state: present
