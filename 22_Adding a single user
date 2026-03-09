@@ -1,0 +1,14 @@
+# Adding a single user to the system
+---
+- name: Adding a new user to the system
+  hosts: centos
+  gather_facts: no
+  become: yes
+#  become_user: root
+
+  tasks:
+    - name: New user
+      ansible.builtin.user:
+        name: saman.r
+        comment: "Saman Rathnayake"
+        shell: /bin/bash
