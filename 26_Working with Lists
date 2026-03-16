@@ -1,0 +1,11 @@
+---
+- name: Working with Ansible lists
+  hosts: ubuntu
+  gather_facts: no 
+  vars:
+    port_nos: [80,443,25,23,22]
+  
+  tasks:
+  - name: Display the first item of the list
+    ansible.builtin.debug:
+      msg: "The first item of the list is {{ port_nos[0] }}"
