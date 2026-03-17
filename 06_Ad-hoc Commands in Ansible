@@ -35,3 +35,7 @@ $ ansible -i inventory_file all -m yum -a "name=apache2 state=latest"
 => Installs a MySQL-python package on the app group in the invenroty.ini file.
 
 $ ansible -i inventory.ini app -m yum -a "name=MySQL-python state=present"
+
+=> How to limit a host from the prompt:
+
+$ ansible -i inventory.ini -m ping all --limit '!192.168.1.100' //This is will skip the host having 192.168.1.100 IP address
