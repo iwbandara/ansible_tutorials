@@ -4,10 +4,16 @@
   become: true
 
   tasks:
-  - name: Copy a file
+  - name: Copy a file from local host to remote host
     ansible.builtin.copy:
       src: /home/<user-name>/<file-name>
       dest: /tmp/<file-name>
       user: <user-name>
       group: <group-name>
       mode: '0644'
+
+  - name: Copy files from remote host to local host
+      fetch:
+        src: /home/iwbandara/log_file
+        dest: /home/iwbandara/Desktop/ansible/backup/
+        flat: yes
