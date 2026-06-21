@@ -38,9 +38,6 @@ List:
 
 17 - How to verify your Playbook
 
-18 - How to archive a file
+18 - How to archive a file using Ansible
 
-19 - How to unarchive a file
-
-
-17 - How to verify your Playbook?
+19 - How to unarchive a file using Ansible
