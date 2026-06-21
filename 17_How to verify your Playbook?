@@ -14,3 +14,7 @@ Verifying Your Plabooks:
 3. To list the hosts of each play in the Playbook:
 
   # anisble-playbook -i hosts playbook.yml --list-hosts
+
+4. To list the tasks of each play in the Playbook:
+
+  # anisble-playbook -i hosts playbook.yml --list-tasks
