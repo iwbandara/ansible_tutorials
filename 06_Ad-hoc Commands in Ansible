@@ -42,4 +42,8 @@ $ ansible -i inventory.ini app -m yum -a "name=MySQL-python state=present"
 
 => How to limit a host from the prompt:
 
+$ ansible -i inventory.ini -m ping all --limit '192.168.1.100' //This is will run the command only on the host having the IP address
+ of 192.168.1.100
+=> How to limit a host from the prompt:
+
 $ ansible -i inventory.ini -m ping all --limit '!192.168.1.100' //This is will skip the host having 192.168.1.100 IP address
