@@ -4,6 +4,10 @@ Ansible Ad Hoc Commands:
 -a stands for arguments
 -i is used to mention the inventory file location.
 
+=> To run a shell command on a specific host from the inventory file:
+
+ $ ansible X.X.X.X -i inventory.ini -m shell -a "ls -l"
+
 => To run a shell command with sudo on all hosts in an inventory file.
  
 $ ansible -i <inventory_file> all -b -m shell -a "sudo command"
