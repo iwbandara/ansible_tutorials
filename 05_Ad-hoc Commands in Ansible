@@ -1,12 +1,12 @@
 # Running ad-hoc commands in Ansible
 
-# What is ad-hoc commands
+# What are ad-hoc commands?
 
     Ad-Hoc commands are an easy way to run quick commands to perform the actions, and it will not be saved for later.
     
     It uses the /usr/bin/ansible command-line tool to automate a single task on one or more managed nodes.
 
-# Ad hoc command syntax:
+# Ad-hoc command syntax:
 
     ansible [host group] [module] [arguments for the module]
 
@@ -20,15 +20,17 @@
 
         ansible -i inventory/hosts -m file -a "path=/home/iwbandara/test_file" state=touch" --user iwbandara --ask-pass
 
-# How to remove the httpd package
+# How to remove the httpd package:
 
     Option 01:
-        ansible servers -m yum -a "name=httpd state=removed"
+
+        # ansible servers -m yum -a "name=httpd state=removed"
 
     Option 02:
-        ansible servers -m yum -a "name=httpd state=absent"
+        
+        # ansible servers -m yum -a "name=httpd state=absent"
 
 # Change the ownership of a file
 
-        ansible servers -m file -a "path=/tmp/testfile group=sysadmins owner=iwbandara"
+        # ansible servers -m file -a "path=/tmp/testfile group=sysadmins owner=iwbandara"
      
