@@ -1,0 +1,30 @@
+--- 
+- name: Reboot remote nodes (Play 1)
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Reboot a node
+      reboot:
+        msg: "Node is rebooting..."
+
+- name: Install packages on Web Servers (Play 2)
+  hosts: web_servers
+  become: yes
+
+  tasks:
+    - name: install tmux
+      package:
+        name: tmux
+        state: present
+
+- name: Create an archive (Play 3)
+  hosts: ubuntu
+  become: yes
+
+  tasks:
+    - name: create an archive
+      archive:
+        path: /var/log
+        dest: /tmp/logs.tar.gz
+        format: gz
