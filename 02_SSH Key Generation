@@ -6,21 +6,37 @@
   The public key is uploaded to a remote server that you want to be able to log into with SSH.
 
 # Generating RSA Keys:
+----------------------
+
   $ ssh-keygen // will create RSA type SSH-keys.
 
 # Generating SSH keys (Type ed25519):
-  $ ssh-keygen -t ed25519 -C "ansible keys" # this will create an ed25519 key type
+-------------------------------------
 
-# The above command creates two key types (Private & Public)
+  $ ssh-keygen -t ed25519 -C "ansible keys" # this will create an ed25519 key type with a comment
 
-# Copy the generated Public key (xxx.pub) to managed hosts
+    # The above command creates two key types (Private & Public)
 
-Syntax:
-  $ ssh-copy-id user@host-ip-address
-Example:
-  $ ssh-copy-id root@192.168.1.112
+# Copying the generated Public key (xxx.pub) to managed hosts:
+--------------------------------------------------------------
 
-Syntax:
-  $ ssh-copy-id -i <location-of-the-file> username@ip-address-of-client
-Example:
-  $ ssh-copy-id -i /Users/iwbandara/.ssh/ansible_demo.pub iwbandara@192.168.10.1
+  Syntax:
+    
+    $ ssh-copy-id user@host-ip-address
+
+  Example:
+
+    $ ssh-copy-id root@192.168.1.112
+
+*** Above command search the SSH key at the default location.
+
+# How to copy the file which is located at a different location:
+----------------------------------------------------------------
+
+  Syntax:
+
+    $ ssh-copy-id -i <location-of-the-file> username@ip-address-of-client
+
+  Example:
+
+    $ ssh-copy-id -i /Users/iwbandara/.ssh/ansible_demo.pub iwbandara@192.168.10.1
