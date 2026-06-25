@@ -1,0 +1,9 @@
+---
+- name: Working with Cron Jobs
+  hosts: fedora_srvs
+
+  tasks:
+  - name: To remove a job completely.
+    ansible.builtin.cron:
+      name: "check dirs"
+      state: absent
