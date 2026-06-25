@@ -1,0 +1,14 @@
+---
+- name: Add a Cron Job
+  hosts: fedora_srvs
+
+  tasks:
+  - name: Ensure a job that runs at 2 and 5 exists. Creates an entry like "0 5,2 12 5 1 ls -alh > /dev/null"
+    ansible.builtin.cron:
+      name: "check dirs"
+      minute: "0"
+      hour: "5,2"
+      day: "12"
+      month: "5"
+      weekday: "1"
+      job: "ls -alh > /dev/null"
