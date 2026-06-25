@@ -1,0 +1,15 @@
+---
+- name: Working with Cron Jobs
+  hosts: fedora_srvs
+
+  tasks:
+  - name: To temporarily stop a cron job without deleting it, set "disabled-true". Ansible will comment it out in the crontab
+    ansible.builtin.cron:
+      name: "check dirs"
+      minute: "0"
+      hour: "5,2"
+      day: "12"
+      month: "5"
+      weekday: "1"
+      job: "ls -alh > /dev/null"
+      disabled: true
